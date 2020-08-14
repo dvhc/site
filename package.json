@@ -20,6 +20,7 @@
 		"next": "^9.5.2",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
+		"react-feather": "^2.0.8",
 		"rebass": "^4.0.7",
 		"theme-ui": "^0.3.1"
 	}

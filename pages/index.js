@@ -1,5 +1,5 @@
 import React from "react"
-import { Heading, Flex, Text } from "rebass"
+import { Heading, Flex, Text, Button } from "rebass"
 import ImageContainer from "../components/ImageContainer"
 
 const Index = (props) => {
@@ -21,7 +21,7 @@ const Index = (props) => {
             </Flex>
             <Flex flexDirection={["column", "row-reverse", "row-reverse"]}>
                 <Flex flexDirection="column" flex="1">
-                    <Heading>What We Do</Heading>
+                    <Heading mx="auto">What We Do</Heading>
                     <ul style={{
                         listStyleType: "none"
                     }}>
@@ -40,6 +40,14 @@ const Index = (props) => {
                         m: "20px"
                     }} src="https://raw.githubusercontent.com/hackclub/dinosaurs/master/party_orpheus.png" text="Master Orpheus" />
                 </Flex>
+            </Flex>
+            <Flex flexDirection="column">
+                <Button sx={{
+                    ":hover": {
+                        bg: "secondary",
+                        cursor: "pointer"
+                    }
+                }} mx="auto" as="a" target="_blank" href="https://airtable.com/shrR0bmKueGVNzz16">Sign Up now!</Button>
             </Flex>
         </Flex>
     )
