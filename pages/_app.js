@@ -6,7 +6,6 @@ import Footer from "../components/Footer"
 import { Flex, Image } from "rebass"
 import Nav from "../components/Nav"
 import Head from "next/head"
-import Banner from "@hackclub/banner"
 
 export default ({ props, Component }) =>
     <ThemeProvider theme={theme}>
