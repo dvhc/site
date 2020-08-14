@@ -12,7 +12,6 @@ export default ({ props, Component }) =>
         <Head>
             <title>DVHackClub</title>
         </Head>
-        <Banner year={2020} style={{ width: '256px' }} />
         <Flex className="rotate" sx={{
             display: ["none", "block", "block"],
             position: "absolute",
