@@ -13,7 +13,7 @@ const Footer = props => {
         }}>
             <Text m="auto" mb="10px">Made with 💖 by the DVHackClub Team!</Text>
             <Link m="auto" href="mailto:neel.redkar@gmail.com" my="5px">Contact us!</Link>
-            <Link m="auto" mt="10px" href="https://github.com/neelr">View the Source Code</Link>
+            <Link m="auto" mt="10px" href="https://github.com/neelr/DVHackClub">View the Source Code</Link>
         </Flex >
     )
 }
