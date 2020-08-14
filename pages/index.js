@@ -10,7 +10,7 @@ const Index = (props) => {
             <Flex flexDirection={["column", "row", "row"]}>
                 <Flex flexDirection="column" flex="1">
                     <Heading>Why HackClub?</Heading>
-                    <Text>Andouille picanha alcatra pancetta beef fatback chuck. Jerky brisket turkey salami porchetta, jowl leberkas short loin chicken. Ribeye buffalo landjaeger pork venison pork chop. Buffalo leberkas frankfurter picanha swine tri-tip prosciutto ham hock rump bresaola flank meatball. Ham hock tri-tip brisket rump. Short loin prosciutto sirloin alcatra. Flank bresaola spare ribs shank biltong landjaeger pork loin capicola hamburger short ribs ham burgdoggen.</Text>
+                    <Text>So what separates Hack Club from all the rest of the programming clubs at DV? Is it the inclusiveness? Is it the ebic people in the club? Yes, but the most important thing is that we teach you how to create programs. Instead of focusing on principles, we get you started through the ways of almost every tech ceo started, by making. We'll help you create websites for your friend, crazy AI projects, and more! On the way, we'll teach the basics of CS! For advanced people, we provide a way to get help, make friends (not just for advanced people), and present cool projects you've been working on!</Text>
                 </Flex>
                 <Flex flexDirection="column" flex="1" flexGrow="1">
                     <ImageContainer sx={{
@@ -41,7 +41,7 @@ const Index = (props) => {
                     }} src="https://raw.githubusercontent.com/hackclub/dinosaurs/master/party_orpheus.png" text="Master Orpheus" />
                 </Flex>
             </Flex>
-            <Flex flexDirection="column">
+            <Flex flexDirection="column" my="20px">
                 <Button sx={{
                     ":hover": {
                         bg: "secondary",
