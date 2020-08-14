@@ -13,7 +13,7 @@ export default ({ props, Component }) =>
             <title>DVHackClub</title>
         </Head>
         <Flex className="rotate" sx={{
-            display: ["none", "block", "block"],
+            display: ["none !important", "none !important", "flex !important"],
             position: "absolute",
             width: "256px",
             top: "-10px",
