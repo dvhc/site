@@ -16,7 +16,7 @@ export default ({ props, Component }) =>
             display: ["none !important", "none !important", "flex !important"],
             position: "absolute",
             width: "256px",
-            top: "-10px",
+            top: "-14px",
             left: "10px",
         }} as="a" href="https://hackclub.com">
             <Image sx={{ height: "100%" }} src="https://assets.hackclub.com/flag-orpheus-top.svg" />
