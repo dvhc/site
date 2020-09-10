@@ -12,7 +12,8 @@ let NavLink = ({ sx, ...props }) =>
             ":hover": {
                 color: "secondary",
                 cursor: "pointer"
-            }
+            },
+            zIndex: 100000
         }} {...props}>
             {props.children}
         </Text>

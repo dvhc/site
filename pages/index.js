@@ -16,7 +16,7 @@ const Index = (props) => {
                     <ImageContainer sx={{
                         height: ["200px", "100%", "100%"],
                         m: "20px"
-                    }} src="https://cdn.glitch.com/9f68e7eb-cbc8-4d6e-b977-6d54e27ebcf6%2F25.jpg?v=1565835464993" text="Windy City Hacks" />
+                    }} src="/static/cover.jpg" text="People having fun at DVHacks" />
                 </Flex>
             </Flex>
             <Flex flexDirection={["column", "row-reverse", "row-reverse"]}>
