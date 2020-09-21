@@ -2,7 +2,7 @@ var Airtable = require('airtable');
 var base = new Airtable({ apiKey: process.env.KEY }).base(process.env.BASE);
 
 export default async (req, res) => {
-    let announcements = await base('Announcments').select({
+    let announcements = await base('Announcements').select({
         view: "Grid view"
     }).all()
 

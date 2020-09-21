@@ -1,12 +1,24 @@
-import React from "react"
-import { Heading, Flex, Text, Button } from "rebass"
+import React, { useState, useEffect } from "react"
+import { Heading, Flex, Text, Button, Link as A } from "rebass"
 import ImageContainer from "../components/ImageContainer"
+import fetch from "isomorphic-unfetch"
 
 const Index = (props) => {
+    let [people, setPeople] = useState(0)
+
+    useEffect(() => {
+        (async () => {
+            let data = await fetch("https://dvhc.now.sh/api/count")
+            let count = await data.json()
+            setPeople(count.count)
+        })()
+    }, [])
+
     return (
         <Flex flexDirection="column" px={["30px", "20vw"]}>
             <Heading mx="auto" mt="30px" fontSize={[5, 6, 7]}><Text as="span" color="primary">DV</Text>HackClub</Heading>
             <Text mx="auto" as="strong">What will you make?</Text>
+            <Text mx="auto" color="primary" fontWeight="bold">{people} people have signed up! <A href="#signup">Sign up now!</A></Text>
             <Flex flexDirection={["column", "row", "row"]}>
                 <Flex flexDirection="column" flex="1">
                     <Heading>Why HackClub?</Heading>
@@ -41,7 +53,7 @@ const Index = (props) => {
                     }} src="https://raw.githubusercontent.com/hackclub/dinosaurs/master/party_orpheus.png" text="Master Orpheus" />
                 </Flex>
             </Flex>
-            <Flex flexDirection="column" my="20px">
+            <Flex flexDirection="column" my="20px" id="signup">
                 <Button sx={{
                     ":hover": {
                         bg: "secondary",
