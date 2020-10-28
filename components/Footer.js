@@ -12,7 +12,7 @@ const Footer = props => {
             flexDirection: "column"
         }}>
             <Text m="auto" mb="10px">Made with 💖 by the DVHackClub Team!</Text>
-            <Link m="auto" href="mailto:hackclub@neelr.dev" my="5px">Contact us!</Link>
+            <Link m="auto" href="mailto:neel.redkar@gmail.com" my="5px">Contact us!</Link>
             <Link m="auto" mt="10px" href="https://github.com/dvhc/site">View the Source Code</Link>
         </Flex >
     )
