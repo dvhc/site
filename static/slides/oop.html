@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<title>Object Oriented Javascript</title>
+
+		<link rel="stylesheet" href="/static/dist/reset.css" />
+		<link rel="stylesheet" href="/static/dist/reveal.css" />
+		<link rel="stylesheet" href="/static/dist/theme/black.css" id="theme" />
+
+		<!-- Theme used for syntax highlighted code -->
+		<link
+			rel="stylesheet"
+			href="/static/plugin/highlight/monokai.css"
+			id="highlight-theme"
+		/>
+		<style>
+			li,
+			p {
+				font-size: 0.8em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<div data-markdown>## Advanced JS</div>
+					<img
+						style="width: 40%; border-radius: 10%"
+						data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png"
+					/>
+					<div data-markdown style="color: var(--link-color-hover)">
+						***Start building.***
+					</div>
+				</section>
+				<section>
+					<div data-markdown>
+                        ### *Review* 
+                        What are these?
+                        ```js
+                        var x = 1
+                        function test(x,y) {
+                            var z = x
+                            while (z < y) {
+                                console.log(z)
+                                z = z + 1;
+                            }
+                        }
+                        test(x,10)
+                        ```
+                    </div>
+                    <p class="fragment fade-up">It logs 1 to 9 in the console</p>
+				</section>
+				<section>
+					<div data-markdown>
+                        ## Concepts
+                        
+                        - Objects (arguably the most important)
+                        - Classes
+                        - Imports
+
+					</div>
+				</section>
+				<section>
+					<div data-markdown>
+                        ### Objects
+                        - What is an object?
+                            - An object is the base data type in Javascript
+                            - Denoted with curly brackets
+                        ```js
+                        var x = [0,1,2,3,4,5]
+                        var y = {
+                                hello:0,
+                                bye:"no you",
+                                others: function () {
+                                    console.log("function ran")
+                                }
+                        }
+                        console.log(x[0])
+                        console.log(y.hello)
+                        console.log(y["bye"])
+                        y.others()
+                        ```
+                        - Consists of key value pairs
+                        - Can contain any other data type
+					</div>
+                </section>
+                <section>
+					<div data-markdown>
+                        ### Classes
+                        - What is an class?
+                            - A class is a description of an object
+                        - A class has
+                            - properties (variables)
+                            - methods (functions)
+                        - Ball example
+                            - Balls diameter (property)
+                            - Ball bouncing (method)
+                            - Ball rolling (???)
+                        - Why are they useful
+                            - creates readable code, and follows real life
+					</div>
+                </section>
+                <section>
+					<div data-markdown>
+                        ### Class Code
+                        ```js
+                        class Ball {
+                            diameter = 7
+                            name = "Victor"
+                            height = 0
+                            constructor(input) {
+                                console.log(input)
+                            }
+                            up() {
+                                this.height = this.height + 1
+                            }
+                        }
+                        var myBall = new Ball("My ball")
+                        console.log("My height is " + myBall.height)
+                        myBall.up()
+                        console.log("My height is now" + myBall.height)
+                        ```
+					</div>
+                </section>
+                <section>
+                    <div data-markdown>
+                        ## Imports
+
+                        - You can export things from files, and import them in others
+                        - Helpful so you can make things structured and concise
+                        ```js
+                        // in ball.js
+                        export default class Ball {
+                            diameter = 7
+                            name = "Victor"
+                            height = 0
+                            constructor(input) {
+                                console.log(input)
+                            }
+                            up() {
+                                this.height = this.height + 1
+                            }
+                        }
+                        export var hello = "peekabo"
+                        ```
+                        ```js
+                        // in script.js
+                        import Ball, {hello} from "./ball.js"
+                        var ball = new Ball("hi")
+                        console.log(hello)
+                        ```
+                    </div>
+                </section>
+                <section>
+                    <div data-markdown>
+                        ## Yay!
+                        Next class we'll learn React, and soon how to build phone apps!
+
+                        Questions? Contact me at hi@neelr.dev
+                    </div>
+                </section>
+			</div>
+		</div>
+
+		<script src="/static/dist/reveal.js"></script>
+		<script src="/static/plugin/notes/notes.js"></script>
+		<script src="/static/plugin/markdown/markdown.js"></script>
+		<script src="/static/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			});
+		</script>
+	</body>
+</html>
