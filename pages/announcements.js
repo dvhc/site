@@ -7,7 +7,7 @@ const Announcements = props => {
     let [announcements, setAnnouncements] = useState([])
     useEffect(() => {
         (async () => {
-            let data = await fetch("https://dvhc.now.sh/api/announcements")
+            let data = await fetch("https://dv.hackclub.com/api/announcements")
             let announcmentsJSON = await data.json()
             setAnnouncements(announcmentsJSON)
         })()
