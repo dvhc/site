@@ -4,15 +4,6 @@ import ImageContainer from "../components/ImageContainer";
 import fetch from "isomorphic-unfetch";
 
 const Index = (props) => {
-  let [people, setPeople] = useState(0);
-
-  useEffect(() => {
-    (async () => {
-      let data = await fetch("https://dv.hackclub.com/api/count");
-      let count = await data.json();
-      setPeople(count.count);
-    })();
-  }, []);
 
   return (
     <Flex flexDirection="column" px={["30px", "20vw"]}>
@@ -26,7 +17,7 @@ const Index = (props) => {
         What will you make?
       </Text>
       <Text mx="auto" color="primary" fontWeight="bold">
-        {people} people have signed up! <A href="#signup">Sign up now!</A>
+        {props.people} people have signed up! <A href="#signup">Sign up now!</A>
       </Text>
       <Flex flexDirection={["column", "row", "row"]}>
         <Flex flexDirection="column" flex="1">
@@ -104,5 +95,13 @@ const Index = (props) => {
     </Flex>
   );
 };
+
+export async function getStaticProps(context) {
+  let data = await fetch("https://dv.hackclub.com/api/count");
+  let count = await data.json();
+  return {
+    props: count
+  }
+}
 
 export default Index;
